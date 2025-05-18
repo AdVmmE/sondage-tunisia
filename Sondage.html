@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sondage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sondage</h1>
+    
+    <h2>AUTHENTIFICATION / INSCRIPTION</h2>
+    <form id="surveyForm" action="Sondage.php" method="POST">
+        <div class="form-group">
+            <label for="mail">@Mail:</label>
+            <input type="text" id="mail" name="mail" maxlength="50" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" maxlength="6" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="genre">Genre:</label>
+            <select id="genre" name="genre" required>
+                <option value="">indiquer votre genre</option>
+                <option value="M">Masculin</option>
+                <option value="F">Féminin</option>
+            </select>
+        </div>
+
+        <h3>Les réseaux sociaux :</h3>
+        <table>
+            <tr>
+                <th>N°</th>
+                <th>Question / Affirmation</th>
+                <th>Oui</th>
+                <th>Non</th>
+                <th>Sans avis</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Les informations partagées sur les réseaux sociaux sont fiables</td>
+                <td><input type="radio" name="q1" value="1O" required></td>
+                <td><input type="radio" name="q1" value="1N"></td>
+                <td><input type="radio" name="q1" value="1S"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>L'usage des réseaux sociaux par les enfants doit être sous le contrôle parental</td>
+                <td><input type="radio" name="q2" value="2O" required></td>
+                <td><input type="radio" name="q2" value="2N"></td>
+                <td><input type="radio" name="q2" value="2S"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Les réseaux sociaux deviennent une nécessité pour les citoyens</td>
+                <td><input type="radio" name="q3" value="3O" required></td>
+                <td><input type="radio" name="q3" value="3N"></td>
+                <td><input type="radio" name="q3" value="3S"></td>
+            </tr>
+        </table>
+
+        <div class="buttons">
+            <button type="button" onclick="resetForm()">Annuler</button>
+            <button type="submit" onclick="return Test()">Envoyer</button>
+        </div>
+    </form>
+
+    <script src="Controle.js"></script>
+</body>
+</html> 

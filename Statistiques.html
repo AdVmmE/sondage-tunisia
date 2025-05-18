@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistiques</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        select {
+            padding: 5px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Statistiques</h1>
+    
+    <form action="Statistiques.php" method="POST">
+        <div class="form-group">
+            <label for="theme">Thème du sondage:</label>
+            <select id="theme" name="theme" required>
+                <option value="">Choisir un thème</option>
+                <option value="1">Les réseaux sociaux</option>
+                <option value="2">Les jeux vidéo</option>
+            </select>
+        </div>
+        
+        <button type="submit">Editer</button>
+    </form>
+</body>
+</html> 
